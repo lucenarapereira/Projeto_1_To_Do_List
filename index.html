@@ -9,12 +9,28 @@
     <title>To-Do List</title>
 </head>
 <body>
+
+    <nav class="cabecalho">
+        <h1> LISTA DE TAREFAS </h1>
+    </nav>
     
     <script>
         insertRow();
         deleteRow();
         cleanFill();
     </script>
+
+    <div>
+        <label class="campo">Digite a Tarefa Aqui:</label>
+        <input type="text" id="tarefa" style="width: 30em" value="">
+
+        <button onclick="insertRow()" class="botao"><b>Adicionar</b></button>		
+        <button onclick="cleanFill()" class="botao"><b>Limpar</b></button>
+    </div>
    
+    <div class="botaoExcluir">
+        <button onclick="deleteRow()"><b>X</b></button>
+    </div>
+
 </body>
 </html>
