@@ -1,36 +1,44 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE HTML>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script type="text/Javascript" src="script.js" > </script>
-    <title>To-Do List</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+<script type="text/Javascript" src="script.js" > </script>
+<body bgcolor= "#333333" text= "gold">  
+<title>Lista de Tarefas</title>
 </head>
-<body>
+
+<body> 
 
     <nav class="cabecalho">
-        <h1> LISTA DE TAREFAS </h1>
+        <h1> CADASTRO DE TAREFAS </h1>
     </nav>
+
+    <fieldset>        
+
+        <div class="campo">
+            <label>Tarefa</label>
+            <input type="text" id="nome" style="width: 20em" value="">
+        </div>            
+
+        <button onclick="insertRow()" class="botao" ><b>Enviar</b></button>
+		
+		<button onclick="deleteRow()" class="botao" ><b>Excluir</b></button>
+		
+		<!--<button onclick="deleteRow(this.parentNode.parentNode.rowIndex)")" class="botao" ><b>Excluir</b></button>
+        -->
+
+        
+    </fieldset>
+        
     
-    <script>
-        insertRow();
-        deleteRow();
-        cleanFill();
-    </script>
+<table id="tabela">
+        <tr>
+            <td>Tarefas</td>
+        </tr>
 
-    <div>
-        <label class="campo">Digite a Tarefa Aqui:</label>
-        <input type="text" id="tarefa" style="width: 30em" value="">
+</table>
 
-        <button onclick="insertRow()" class="botao"><b>Adicionar</b></button>		
-        <button onclick="cleanFill()" class="botao"><b>Limpar</b></button>
-    </div>
-   
-    <div class="botaoExcluir">
-        <button onclick="deleteRow()"><b>X</b></button>
-    </div>
-
+			
 </body>
 </html>

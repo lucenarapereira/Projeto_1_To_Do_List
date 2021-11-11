@@ -1,19 +1,30 @@
-var events= new Array(), cont=0
+var eventos= new Array(), cont=0
 
-function  insertRow() {
-    events[cont]={
-    activity: document.getElementById("activity").value
-    }
+function insertRow() {
+    eventos[cont]={
 
-    cont++ 
-}
+    nome: document.getElementById("nome").value
 
-function  deleteRow() {
-    if (cont>0)
-        document.getElementById("activity").deleteRow(cont)	
-    cont--
-}
+    };  
+     
+    
+    var tabela = document.getElementById("tabela");
+    var nova_linha = document.createElement("tr");
 
-function  cleanFill() {
-    document.getElementById("activity").value="";
-}
+
+    var nova_col_nome = document.createElement("td");
+    nova_col_nome.innerHTML = eventos[cont].nome;
+    nova_linha.appendChild(nova_col_nome);
+
+    tabela.appendChild(nova_linha);
+
+cont++ 
+}    
+
+
+function deleteRow() {	
+	if (cont>0){
+	document.getElementById("tabela").deleteRow(cont)	
+	cont--
+	}
+	}
