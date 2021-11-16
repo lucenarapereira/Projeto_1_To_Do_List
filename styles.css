@@ -68,37 +68,19 @@ body, input, textarea, button {
 }
 
 
-#tabela {
+.table {
     float: right;
     margin-top: -16%;
     margin-right: 20%;
     margin-bottom: 200%;
     margin-left: -50%;
     color: #ffffff;
+	border: 2px solid #FFC;
+	width: 34em; 
+    height: 30px;
     
 }
 
-table, td, th{
-    border: 2px solid #FFC;
-}
-
-table, tr {
-    width: 34em; 
-    height: 30px;
-}
-                                     
-tr:hover {
-    background-color:#FF6600;        
-}
-
-th {
-    text-align: center; 
-}
-
-
-tr:nth-child(even) {
-    background-color:rgb(131, 127, 127);
-}
 
 .cabecalho {
     text-align: center;
