@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="styles.css">
 <script type="text/Javascript" src="script.js" > </script>
 <body bgcolor= "#333333" text= "gold">  
-<title>Lista de Tarefas</title>
+<title>Cadastro de Tarefas</title>
 </head>
 
 <body> 
@@ -14,30 +14,27 @@
         <h1> CADASTRO DE TAREFAS </h1>
     </nav>
 
-    <fieldset>        
+    <fieldset>      
+            <div class="campo">
+              <label>Tarefa</label>
+       
+                <input id="rowInput" type="text" style="width: 20em" value="">
+                <button id="button" onclick={InsertRow()}>Enviar</button>
+   
+            </div>
 
-        <div class="campo">
-            <label>Tarefa</label>
-            <input type="text" id="nome" style="width: 20em" value="">
-        </div>            
-
-        <button onclick="insertRow()" class="botao" ><b>Enviar</b></button>
-		
-		<button onclick="deleteRow()" class="botao" ><b>Excluir</b></button>
-		
-		<!--<button onclick="deleteRow(this.parentNode.parentNode.rowIndex)")" class="botao" ><b>Excluir</b></button>
-        -->
-
-        
     </fieldset>
-        
-    
-<table id="tabela">
-        <tr>
-            <td>Tarefas</td>
-        </tr>
+                 
+    <div id=table>
+      <ul 
+        id="tableList">                  
+      </ul>          
+    </div>
 
-</table>
+     
+    <script>
+        storageList();
+    </script>
 
 			
 </body>
